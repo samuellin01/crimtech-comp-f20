@@ -1,5 +1,11 @@
 def sum(lst, n):
     # Your code here!
+    duplicateset = lst.copy()
+    for x in lst:
+        duplicateset.remove(x)
+        for y in duplicateset:
+            if (x + y == n):
+                return True
     return False
 
 def test():

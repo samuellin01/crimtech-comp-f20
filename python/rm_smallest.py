@@ -1,5 +1,13 @@
+import math
+
 def rm_smallest(d):
     # Your code here!
+    if (bool(dict)):
+        minval = min(d.values(), default=0)
+        for key in d.keys():
+            if (d[key] == minval):
+                del d[key]
+                return d
     return d
 
 def test():

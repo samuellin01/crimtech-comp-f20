@@ -48,7 +48,10 @@ class Snake(object):
 
     def move(self):
         # TODO: See section 1, "Move the snake!". You will be revisiting this section a few times.
-        pass
+        head = self.body[0]
+        new_head = (head[0] + DIR[self.direction][0], head[1] + DIR[self.direction][1])
+        self.body = [new_head]
+        self.body.extend(self.body[:-1])
 
     def kill(self):
         # TODO: See section 11, "Try again!"
