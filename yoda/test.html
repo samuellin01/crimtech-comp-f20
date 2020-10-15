@@ -9,12 +9,19 @@
         console.log("You found me!");
         function square(i) {
             // Your code here!
-            return 0
+            if(typeof i !== 'number'){
+                return -1   
+            }
+            return i*i
         }
 
         function numberString(i) {
             // Your code here!
-            return ""
+            if (typeof i === 'number' && i >= 0){
+                return "123456789" + i
+            } else {
+                return -1
+            }
         }
     </script>
 </body>
