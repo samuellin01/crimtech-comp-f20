@@ -1,9 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        
-    </head>
-    <body>
 
-    </body>
+<head>
+    <script type="text/javascript" src="response_handler.js"></script>
+    <title>Yoda Chat</title>
+    <link rel='shortcut icon' type='image/png' href='img/favicon.ico'>
+    <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: #7e7863;
+        }
+        h1 {
+            color: darkblue;
+            font-family: "Droid Sans";
+            font-size: 250%;
+        }
+        p {
+            font-family: "Pathway Gothic One", sans-serif;
+            font-size: 160%;
+        }
+        button {
+            background-color: brown;
+            border: none;
+            color: grey;
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>YODA CHAT</h1>
+        <img id="pic" src="img/regular-std.jpg" width="768" height=auto>
+        <p id="caption">To Yoda chat I welcome you. Yes, hmmmmm.</p>
+        <input type="text" id="input" name="" placeholder="">
+        <br><br>
+        <button type="button" id="button" onclick="respond()">Press button</button>
+    </center>
+    <script>
+        var input = document.getElementById("input");
+        input.addEventListener("keyup", function(event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("button").click();
+            }
+        });
+    </script>
+</body>
+
 </html>
